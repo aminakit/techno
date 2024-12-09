@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<modelVersion>4.0.0</modelVersion>
+
+<!-- Основные параметры проекта -->
+<groupId>com.example</groupId>  <!-- Уникальный идентификатор группы, к которой относится проект -->
+<artifactId>my-project</artifactId>  <!-- Идентификатор самого проекта -->
+<version>1.0-SNAPSHOT</version>  <!-- Текущая версия проекта -->
+<packaging>jar</packaging>  <!-- Формат сборки, например, JAR или WAR -->
+
+<!-- Информация о проекте -->
+<name>My Project</name>
+<url>http://www.example.com</url>
+<description>Описание проекта</description>
+
+<!-- Зависимости -->
+<dependencies>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.6.0</version> <!-- Убедитесь, что версия актуальна -->
+    </dependency>
+    <!-- Пример зависимости на библиотеку -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>5.3.10</version>
+    </dependency>
+
+    <!-- Пример зависимости на библиотеку для тестирования -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>  <!-- Указывает, что зависимость используется только в тестах -->
+    </dependency>
+</dependencies>
+
+<!-- Плагины для сборки -->
+<build>
+    <plugins>
+        <!-- Пример плагина для сборки JAR -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>jar</goal>  <!-- Цель для сборки JAR -->
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>7</source>
+                <target>7</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+<!-- Репозитории -->
+<repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>
+
+<!-- Дополнительные настройки -->
+<properties>
+    <java.version>1.8</java.version>  <!-- Указывает версию Java -->
+</properties>
+
+</project>
